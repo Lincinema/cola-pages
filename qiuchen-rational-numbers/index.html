@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>有理数侦探局</title>
+<title>Le Bureau des détectives des nombres relatifs</title>
 <style>
 :root {
   --ink: #202735;
@@ -101,81 +101,81 @@ h2 { margin: 0 0 8px; font-size: 27px; line-height: 1.2; }
   <header class="topbar">
     <div class="brand">
       <div class="badge">⌁</div>
-      <div><h1>有理数侦探局</h1><p>秋辰的四关小任务</p></div>
+      <div><h1>Détectives des nombres relatifs</h1><p>Les 4 missions de Qiuchen</p></div>
     </div>
-    <div class="statline">连对 <span id="streak">0</span> 题　<span class="score">得分 <span id="score">0</span></span></div>
+    <div class="statline">Série <span id="streak">0</span>　<span class="score">Score <span id="score">0</span></span></div>
   </header>
   <div class="progress"><span id="progressBar"></span></div>
   <div class="layout">
     <section class="panel game">
       <div id="questionView">
-        <p class="eyebrow" id="stageLabel">第 1 关 · 看顺序</p>
-        <h2 id="title">先找最先动手的地方</h2>
-        <p class="prompt" id="prompt">侦探不急着算答案，先判断第一步应该做什么。</p>
+        <p class="eyebrow" id="stageLabel">Mission 1 · L'ordre des calculs</p>
+        <h2 id="title">Trouve ce qu'il faut calculer en premier</h2>
+        <p class="prompt" id="prompt">Un détective ne se précipite pas vers la réponse : il cherche d'abord la première étape.</p>
         <div class="expression" id="expression"></div>
-        <p class="question-label" id="questionLabel">第一步应该是：</p>
+        <p class="question-label" id="questionLabel">La première étape est :</p>
         <div class="choices" id="choices"></div>
         <div class="feedback" id="feedback"></div>
-        <button class="next" id="nextBtn">下一题</button>
+        <button class="next" id="nextBtn">Question suivante</button>
       </div>
       <div class="finish" id="finishView">
         <div class="trophy">🏁</div>
-        <h2>案件全部破解</h2>
+        <h2>Toutes les affaires sont résolues</h2>
         <p id="finishText"></p>
-        <button class="next show" id="againBtn">再来一轮</button>
+        <button class="next show" id="againBtn">Rejouer</button>
       </div>
     </section>
     <aside class="panel side">
-      <h3>案件进度</h3>
+      <h3>Progression des missions</h3>
       <div class="mission" id="missions">
-        <button data-stage="0" class="active"><strong>① 看顺序</strong><small>括号先动手</small></button>
-        <button data-stage="1"><strong>② 翻转器</strong><small>减号变相反数</small></button>
-        <button data-stage="2"><strong>③ 算方向</strong><small>正负数加减</small></button>
-        <button data-stage="3"><strong>④ 综合案</strong><small>四步完成</small></button>
+        <button data-stage="0" class="active"><strong>① L'ordre</strong><small>Les parenthèses d'abord</small></button>
+        <button data-stage="1"><strong>② Le retournement</strong><small>Le signe moins change le signe</small></button>
+        <button data-stage="2"><strong>③ La direction</strong><small>Additionner les relatifs</small></button>
+        <button data-stage="3"><strong>④ L'affaire finale</strong><small>Les quatre étapes</small></button>
       </div>
       <div class="rule">
-        <h3>侦探口袋卡</h3>
-        <p><b>1</b> 先看括号，最里面的先算。</p>
-        <p><b>2</b> 减去一个数 = 加上它的相反数。</p>
-        <p><b>3</b> 最后才算正负数。</p>
-        <p class="small-note">今天不碰乘除，只练这三件事。每题答完会告诉你哪一步在起作用。</p>
+        <h3>La carte-mémo du détective</h3>
+        <p><b>1</b> Regarde les parenthèses : commence par l'intérieur.</p>
+        <p><b>2</b> Soustraire un nombre = ajouter son opposé.</p>
+        <p><b>3</b> Calcule les nombres relatifs à la fin.</p>
+        <p class="small-note">Aujourd'hui, pas de multiplications ni de divisions : on entraîne seulement ces trois réflexes. Après chaque réponse, tu découvriras l'étape importante.</p>
       </div>
-      <button class="restart" id="restartBtn">重新开始</button>
+      <button class="restart" id="restartBtn">Recommencer</button>
     </aside>
   </div>
 </main>
 <script>
 const stages = [
   {
-    label: '第 1 关 · 看顺序', title: '先找最先动手的地方', prompt: '侦探不急着算答案，先判断第一步应该做什么。', question: '第一步应该是：',
+    label: "Mission 1 · L'ordre des calculs", title: "Trouve ce qu'il faut calculer en premier", prompt: "Un détective ne se précipite pas vers la réponse : il cherche d'abord la première étape.", question: "La première étape est :",
     items: [
-      { expr: '3 - (8 - 5)', options: ['先算 3 - 8', '先算括号里的 8 - 5', '先把 3 变成 -3'], answer: 1, why: '括号里的计算要先处理，外面的减号先不要动。' },
-      { expr: '5 + (−2 + 7)', options: ['先算括号里的 −2 + 7', '先算 5 + −2', '先把所有负号删掉'], answer: 0, why: '先处理最里面的括号，其他部分暂时保留。' },
-      { expr: '2 − (6 − 9) + 4', options: ['先算 2 − 6', '先算括号里的 6 − 9', '先算最后的 + 4'], answer: 1, why: '看到括号就先看括号里面，不能跳到外面。' }
+      { expr: '3 - (8 - 5)', options: ['Calculer 3 - 8', 'Calculer 8 - 5 dans les parenthèses', 'Transformer 3 en -3'], answer: 1, why: "Il faut d'abord calculer dans les parenthèses ; ne touche pas encore au signe moins extérieur." },
+      { expr: '5 + (−2 + 7)', options: ['Calculer −2 + 7 dans les parenthèses', 'Calculer 5 + −2', 'Supprimer tous les signes moins'], answer: 0, why: "Commence par les parenthèses les plus internes et laisse le reste tel quel pour l'instant." },
+      { expr: '2 − (6 − 9) + 4', options: ['Calculer 2 − 6', 'Calculer 6 − 9 dans les parenthèses', 'Calculer le + 4 final'], answer: 1, why: 'Quand tu vois des parenthèses, commence par leur intérieur : ne saute pas directement à l’extérieur.' }
     ]
   },
   {
-    label: '第 2 关 · 翻转器', title: '减号会把方向翻过来', prompt: '减号后面跟着一个带符号的数时，先把它变成“加相反数”。', question: '哪个改写是正确的：',
+    label: "Mission 2 · Le retournement", title: "Le signe moins inverse la direction", prompt: "Quand un nombre signé suit un signe moins, transforme d'abord la soustraction en « addition de l'opposé ».", question: "Quelle transformation est correcte ?",
     items: [
-      { expr: '3 − (−5)', options: ['3 + (−5)', '3 + (+5)', '−3 + (−5)'], answer: 1, why: '减去负 5，就是加上正 5。减号像一个翻转器。' },
-      { expr: '7 − (+2)', options: ['7 + (−2)', '7 + (+2)', '−7 + (+2)'], answer: 0, why: '减去正 2，就是加上负 2。' },
-      { expr: '−4 − (−3)', options: ['−4 + (+3)', '−4 + (−3)', '+4 + (+3)'], answer: 0, why: '括号里的 −3 变成相反数 +3，前面的 −4 不变。' }
+      { expr: '3 − (−5)', options: ['3 + (−5)', '3 + (+5)', '−3 + (−5)'], answer: 1, why: 'Soustraire −5, c’est ajouter +5. Le signe moins agit comme un retournement.' },
+      { expr: '7 − (+2)', options: ['7 + (−2)', '7 + (+2)', '−7 + (+2)'], answer: 0, why: 'Soustraire +2, c’est ajouter −2.' },
+      { expr: '−4 − (−3)', options: ['−4 + (+3)', '−4 + (−3)', '+4 + (+3)'], answer: 0, why: 'L’opposé de −3 est +3 ; le −4 devant ne change pas.' }
     ]
   },
   {
-    label: '第 3 关 · 算方向', title: '先看谁离 0 更远', prompt: '异号相加时，绝对值更大的那个数决定最后的正负号。', question: '答案是多少：',
+    label: "Mission 3 · Trouver la direction", title: "Regarde d'abord lequel est le plus loin de 0", prompt: "Quand les signes sont différents, le nombre qui est le plus loin de 0 donne le signe du résultat.", question: "Quelle est la réponse ?",
     items: [
-      { expr: '(+2,5) + (−7,2)', options: ['+4,7', '−4,7', '−9,7'], answer: 1, why: '7.2 离 0 更远，所以答案取负；7.2 − 2.5 = 4.7。' },
-      { expr: '(−6,3) + (+9,8)', options: ['−3,5', '+3,5', '+16,1'], answer: 1, why: '9.8 离 0 更远，所以答案取正；9.8 − 6.3 = 3.5。' },
-      { expr: '(−3) + (−4)', options: ['+7', '−1', '−7'], answer: 2, why: '同号都为负，保留负号，再把 3 + 4 = 7。' }
+      { expr: '(+2,5) + (−7,2)', options: ['+4,7', '−4,7', '−9,7'], answer: 1, why: '7,2 est plus loin de 0 : le résultat est donc négatif ; 7,2 − 2,5 = 4,7.' },
+      { expr: '(−6,3) + (+9,8)', options: ['−3,5', '+3,5', '+16,1'], answer: 1, why: '9,8 est plus loin de 0 : le résultat est donc positif ; 9,8 − 6,3 = 3,5.' },
+      { expr: '(−3) + (−4)', options: ['+7', '−1', '−7'], answer: 2, why: 'Les deux nombres sont négatifs : garde le signe −, puis 3 + 4 = 7.' }
     ]
   },
   {
-    label: '第 4 关 · 综合案', title: '四步破案', prompt: '现在把流程连起来：括号、翻转、正负，按顺序来。', question: '最后结果是多少：',
+    label: "Mission 4 · L'affaire finale", title: "Résous l'affaire en quatre étapes", prompt: "Maintenant, relie les étapes : parenthèses, retournement, puis nombres relatifs.", question: "Quel est le résultat final ?",
     items: [
-      { expr: '3,1 − (24 − 8,4) + (7,5 − 11,2)', options: ['−16,2', '+16,2', '−1,0', '+4,6'], answer: 0, why: '括号先算成 +15.6 和 −3.7，再变成 3.1 − 15.6 − 3.7，结果是 −16.2。' },
-      { expr: '(+3) + (−4,5) − (+7,4) + (−6) − (−3,5) + (+7,4)', options: ['−4', '+4', '−11,4', '+7,4'], answer: 0, why: '先把减法改成加相反数，+7.4 和 −7.4 抵消，最后得到 −4。' },
-      { expr: '5 − (−2 + 6)', options: ['+9', '+1', '−1', '−9'], answer: 1, why: '括号先算成 +4，再算 5 − 4 = +1。' }
+      { expr: '3,1 − (24 − 8,4) + (7,5 − 11,2)', options: ['−16,2', '+16,2', '−1,0', '+4,6'], answer: 0, why: 'Les parenthèses donnent +15,6 et −3,7. On obtient 3,1 − 15,6 − 3,7, soit −16,2.' },
+      { expr: '(+3) + (−4,5) − (+7,4) + (−6) − (−3,5) + (+7,4)', options: ['−4', '+4', '−11,4', '+7,4'], answer: 0, why: 'Transforme les soustractions en additions des opposés. +7,4 et −7,4 s’annulent ; il reste −4.' },
+      { expr: '5 − (−2 + 6)', options: ['+9', '+1', '−1', '−9'], answer: 1, why: 'La parenthèse vaut +4, puis 5 − 4 = +1.' }
     ]
   }
 ];
@@ -235,12 +235,12 @@ function answer(index) {
     score += 10 + streak * 2;
     streak += 1;
     feedback.className = 'feedback show good';
-    feedback.innerHTML = `<strong>判断正确。</strong> ${item.why}`;
+    feedback.innerHTML = `<strong>Bonne décision.</strong> ${item.why}`;
   } else {
     streak = 0;
     buttons[index].classList.add('wrong');
     feedback.className = 'feedback show bad';
-    feedback.innerHTML = `<strong>这一步先停一下。</strong> 正确答案是「${fmt(item.options[item.answer])}」。${item.why}`;
+    feedback.innerHTML = `<strong>Arrêtons-nous sur cette étape.</strong> La bonne réponse est « ${fmt(item.options[item.answer])} ». ${item.why}`;
   }
   $('nextBtn').classList.add('show');
   updateProgress();
@@ -256,7 +256,7 @@ function next() {
 function finish() {
   $('questionView').classList.add('hidden');
   $('finishView').classList.add('show');
-  $('finishText').textContent = `本轮得分 ${score} 分。记住三张口袋卡：括号先算，减号翻转，最后算正负。你可以再来一轮，把刚才错的题追回来。`;
+  $('finishText').textContent = `Cette manche rapporte ${score} points. Retiens les trois règles : les parenthèses d'abord, le signe moins se retourne, les nombres relatifs à la fin. Tu peux recommencer pour récupérer les points perdus.`;
   $('progressBar').style.width = '100%';
   document.querySelectorAll('#missions button').forEach(b => { b.classList.remove('active'); b.classList.add('done'); });
 }
