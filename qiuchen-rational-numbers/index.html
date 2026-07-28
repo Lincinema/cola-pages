@@ -87,7 +87,7 @@ h2 { margin: 0 0 8px; font-size: 27px; line-height: 1.2; }
   .side { order: -1; }
   .game { min-height: 500px; padding: 20px 16px; }
   .side { padding: 16px; }
-  .mission { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .mission { grid-template-columns: repeat(5, 1fr); gap: 6px; }
   .mission button { padding: 9px 7px; }
   .mission small { display: none; }
   .mission strong { font-size: 12px; }
@@ -132,13 +132,14 @@ h2 { margin: 0 0 8px; font-size: 27px; line-height: 1.2; }
         <button data-stage="1"><strong>② Le retournement</strong><small>Le signe moins change le signe</small></button>
         <button data-stage="2"><strong>③ La direction</strong><small>Additionner les relatifs</small></button>
         <button data-stage="3"><strong>④ L'affaire finale</strong><small>Les quatre étapes</small></button>
+        <button data-stage="4"><strong>⑤ Niveau expert</strong><small>Parenthèses imbriquées</small></button>
       </div>
       <div class="rule">
         <h3>La carte-mémo du détective</h3>
         <p><b>1</b> Regarde les parenthèses : commence par l'intérieur.</p>
         <p><b>2</b> Soustraire un nombre = ajouter son opposé.</p>
         <p><b>3</b> Calcule les nombres relatifs à la fin.</p>
-        <p class="small-note">Aujourd'hui, pas de multiplications ni de divisions : on entraîne seulement ces trois réflexes. Après chaque réponse, tu découvriras l'étape importante.</p>
+        <p class="small-note">Aujourd'hui, pas de multiplications ni de divisions : on entraîne seulement ces trois réflexes. Après chaque réponse, tu découvriras l'étape importante. Le niveau expert ajoute des parenthèses imbriquées et des calculs plus longs.</p>
       </div>
       <button class="restart" id="restartBtn">Recommencer</button>
     </aside>
@@ -176,6 +177,14 @@ const stages = [
       { expr: '3,1 − (24 − 8,4) + (7,5 − 11,2)', options: ['−16,2', '+16,2', '−1,0', '+4,6'], answer: 0, why: 'Les parenthèses donnent +15,6 et −3,7. On obtient 3,1 − 15,6 − 3,7, soit −16,2.' },
       { expr: '(+3) + (−4,5) − (+7,4) + (−6) − (−3,5) + (+7,4)', options: ['−4', '+4', '−11,4', '+7,4'], answer: 0, why: 'Transforme les soustractions en additions des opposés. +7,4 et −7,4 s’annulent ; il reste −4.' },
       { expr: '5 − (−2 + 6)', options: ['+9', '+1', '−1', '−9'], answer: 1, why: 'La parenthèse vaut +4, puis 5 − 4 = +1.' }
+    ]
+  },
+  {
+    label: "Mission 5 · Niveau expert", title: "Les parenthèses imbriquées", prompt: "Plusieurs parenthèses se cachent les unes dans les autres. Commence toujours par la plus intérieure.", question: "Quel est le résultat final ?",
+    items: [
+      { expr: '6,4 − (2,7 − (−1,3))', options: ['+2,4', '+5,0', '−2,4', '+9,0'], answer: 0, why: 'Commence par 2,7 − (−1,3) = +4, puis 6,4 − 4 = +2,4.' },
+      { expr: '4,2 − (−3,5 − (+1,2))', options: ['+1,9', '+8,9', '−5,9', '+6,5'], answer: 1, why: 'La parenthèse vaut −4,7. Donc 4,2 − (−4,7) = 4,2 + 4,7 = +8,9.' },
+      { expr: '(+12,5) + (−4,8) − (−3,2) − (+10,9)', options: ['+0,0', '−6,4', '+4,2', '−1,4'], answer: 0, why: 'Transforme les soustractions : 12,5 − 4,8 + 3,2 − 10,9 = 0,0.' }
     ]
   }
 ];
