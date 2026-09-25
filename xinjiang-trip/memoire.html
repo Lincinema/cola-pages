@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新疆南疆 · 回忆录</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:#f7f3ec; color:#2b2419; line-height:1.75; padding:0 0 48px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap { max-width:680px; margin:0 auto; padding:0 20px; }
+
+/* 封面 */
+header { padding:56px 20px 40px; text-align:center; background:linear-gradient(180deg,#8b4513 0%,#7a3d11 100%); color:#f7f3ec; }
+header .kicker { font-size:.78em; letter-spacing:.22em; opacity:.72; margin-bottom:14px; }
+header h1 { font-size:1.85em; font-weight:600; letter-spacing:.06em; margin-bottom:16px; }
+header .sub { font-size:.9em; opacity:.88; line-height:2; }
+header .route { margin-top:22px; font-size:.82em; opacity:.8; line-height:2.1; letter-spacing:.02em; }
+
+/* 数字条 */
+.facts { display:flex; flex-wrap:wrap; gap:1px; background:#e0d6c6; border-radius:10px; overflow:hidden; margin:26px 0 8px; }
+.fact { flex:1 1 30%; background:#fffdf9; padding:14px 10px; text-align:center; min-width:96px; }
+.fact b { display:block; font-size:1.28em; color:#8b4513; font-weight:600; letter-spacing:.02em; }
+.fact span { font-size:.74em; color:#8a7a63; letter-spacing:.08em; }
+
+/* 日 */
+.day { margin:30px 0 0; }
+.day-head { display:flex; align-items:baseline; gap:10px; border-bottom:2px solid #8b4513; padding-bottom:7px; margin-bottom:14px; }
+.day-date { font-size:.8em; color:#fff; background:#8b4513; padding:3px 9px; border-radius:4px; letter-spacing:.06em; white-space:nowrap; }
+.day-place { font-size:1.12em; font-weight:600; color:#5c3317; letter-spacing:.04em; }
+.day-transport { margin-left:auto; font-size:.74em; color:#9c8b73; white-space:nowrap; }
+.day ul { list-style:none; }
+.day li { font-size:.93em; margin:7px 0; padding-left:16px; position:relative; }
+.day li::before { content:"·"; position:absolute; left:3px; color:#b39a78; font-weight:700; }
+
+/* 她的原话 */
+blockquote {
+  margin:14px 0; padding:14px 16px 14px 18px; background:#fffdf9;
+  border-left:3px solid #c8a878; border-radius:0 8px 8px 0;
+  font-family:Georgia,"Songti SC","SimSun",serif; font-size:.95em; color:#43382a; line-height:1.9;
+}
+blockquote .who { display:block; font-family:-apple-system,"Segoe UI","PingFang SC",sans-serif; font-size:.68em; color:#a8937a; letter-spacing:.14em; margin-bottom:7px; }
+
+/* 待补 */
+.todo { margin:34px 0 0; padding:18px 20px; background:#fdf6e9; border:1px dashed #d8c4a0; border-radius:10px; }
+.todo h3 { font-size:.95em; color:#8b4513; margin-bottom:10px; letter-spacing:.04em; }
+.todo p { font-size:.88em; color:#6b5c47; margin:6px 0; }
+.todo .days { font-size:.88em; color:#43382a; line-height:2; }
+
+/* 费用 */
+h2.sec { font-size:1.05em; color:#fff; background:#8b4513; padding:8px 14px; border-radius:6px; margin:40px 0 16px; letter-spacing:.08em; }
+table { width:100%; border-collapse:collapse; font-size:.86em; background:#fffdf9; border-radius:8px; overflow:hidden; }
+th { background:#5c3317; color:#fff; padding:9px 10px; text-align:left; font-weight:500; font-size:.92em; }
+td { padding:9px 10px; border-bottom:1px solid #ece3d5; vertical-align:top; }
+tr:last-child td { border-bottom:none; }
+td.num { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+tr.total td { background:#f2e9da; font-weight:600; color:#5c3317; }
+.muted { color:#a8937a; font-size:.9em; }
+
+/* 记住的 */
+.keeps { background:#fffdf9; border-radius:10px; padding:18px 20px; }
+.keeps li { list-style:none; font-size:.92em; margin:11px 0; padding-left:18px; position:relative; }
+.keeps li::before { content:"◆"; position:absolute; left:0; color:#c8a878; font-size:.75em; top:.35em; }
+
+footer { text-align:center; color:#a8937a; font-size:.76em; margin:44px 0 0; line-height:2; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">2026 · 夏</div>
+  <h1>新疆南疆</h1>
+  <div class="sub">
+    7月14日 — 7月25日 · 12天<br>
+    张琳 · 秋辰 · 冬辰
+  </div>
+  <div class="route">
+    杭州 → 西安 → 兰州 → 乌鲁木齐 → 库尔勒 → 库车 → 喀什<br>
+    ✈ 西安 → 杭州
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="facts">
+    <div class="fact"><b>12</b><span>天</span></div>
+    <div class="fact"><b>6</b><span>座城</span></div>
+    <div class="fact"><b>1</b><span>次飞行</span></div>
+    <div class="fact"><b>9,426</b><span>元（有记录的）</span></div>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/14 周二</span>
+      <span class="day-place">杭州 → 西安</span>
+      <span class="day-transport">G1882</span>
+    </div>
+    <ul>
+      <li>早上 7:53 杭州东上车，下午 3:42 到西安北，七个多小时。</li>
+      <li>傍晚南门城墙、鼓楼，一路走进回民街。</li>
+      <li>住百奥国际酒店（回民街旁），两晚。</li>
+    </ul>
+    <blockquote>
+      <span class="who">你的原话</span>
+      到洛阳龙门站了，西安不远了
+    </blockquote>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/15 周三</span>
+      <span class="day-place">西安</span>
+      <span class="day-transport">全天</span>
+    </div>
+    <blockquote>
+      <span class="who">你的原话</span>
+      7月15日，西安路上全是扯大家去汉服体验的。我想让秋辰去试试唐装裙子，被他无情地拒绝了
+    </blockquote>
+    <ul>
+      <li>上午 8:30 入场兵马俑（成人 120 元，两个儿子免票）。</li>
+      <li>下午回酒店休息。</li>
+      <li>傍晚大雁塔喷泉，一路走到大唐不夜城看演出——两个地方都去了，都回来了。</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/16 周四</span>
+      <span class="day-place">西安 → 兰州</span>
+      <span class="day-transport">D2635</span>
+    </div>
+    <blockquote>
+      <span class="who">你的原话</span>
+      7月16日，在兰州，黄河铁桥过去的地方坐了羊皮筏子。
+    </blockquote>
+    <ul>
+      <li>早上 8:54 出发，中午 11:57 到兰州西。</li>
+      <li>黄河铁桥（中山桥）、白塔山、正宁路夜市。</li>
+      <li>牛肉面 8 元一碗，一清二白三红四绿五黄。</li>
+      <li>住兰州拾光民宿（兰州高铁西站店），一晚。</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/17 周五</span>
+      <span class="day-place">兰州 → 乌鲁木齐</span>
+      <span class="day-transport">D575</span>
+    </div>
+    <blockquote>
+      <span class="who">你的原话</span>
+      7月17日我选了静音车厢，列车员特别敬业，只要经过就得提醒大姨们别大声说话，别手机外放。就是车厢交接处有个小孩，穿了一双走一步就“叽”一声的鞋，一直走，叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽叽
+    </blockquote>
+    <ul>
+      <li>10:12 上车，21:20 到乌鲁木齐，11 个小时，一整天穿过河西走廊。</li>
+      <li>下车直接睡。</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/18 周六</span>
+      <span class="day-place">乌鲁木齐</span>
+      <span class="day-transport">全天</span>
+    </div>
+    <ul>
+      <li>上午国际大巴扎：烤包子、手抓饭。看，不买。</li>
+      <li>下午新疆博物馆（免费）：楼兰干尸、唐代文书。</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/19 周日</span>
+      <span class="day-place">乌鲁木齐</span>
+      <span class="day-transport">天池</span>
+    </div>
+    <ul>
+      <li>天山天池一日游。</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/20 周一</span>
+      <span class="day-place">乌鲁木齐 → 库尔勒 → 库车</span>
+      <span class="day-transport">C802 + T9521</span>
+    </div>
+    <ul>
+      <li>中午到库尔勒，包车接站，行李扔后备箱。</li>
+      <li>下午博斯腾湖：沙滩、睡莲，七月的莲海世界。</li>
+      <li>20:00 上车，22:39 到库车。</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/21 周二</span>
+      <span class="day-place">库车 → 喀什</span>
+      <span class="day-transport">包车 + 夜车</span>
+    </div>
+    <ul>
+      <li>包车一整天：克孜尔千佛洞（比敦煌早两百年，洞内不许拍照）、天山神秘大峡谷。</li>
+      <li>22:24 上 T9527 软卧，睡一觉到喀什。</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/22 周三</span>
+      <span class="day-place">喀什</span>
+      <span class="day-transport">全天</span>
+    </div>
+    <ul>
+      <li>早上到喀什。老城不赶景点，就是走路：巷子里的小孩、铜器店的叮当声、馕坑的热气。</li>
+      <li>艾提尕尔清真寺、百年茶馆二楼坐一小时。</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/23 周四</span>
+      <span class="day-place">喀什第二天 · 白沙山白沙湖</span>
+      <span class="day-transport">包车</span>
+    </div>
+    <blockquote>
+      <span class="who">你的原话</span>
+      老二的眼镜在喀什的第二天，去白沙山白沙湖那个旅程，丢了
+    </blockquote>
+    <ul>
+      <li>往帕米尔方向走，慕士塔格峰脚下，海拔 3600 米，冲锋衣是这天唯一的正确决定。</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/24 周五</span>
+      <span class="day-place">喀什 → 西安</span>
+      <span class="day-transport">✈ 夜航</span>
+    </div>
+    <blockquote>
+      <span class="who">你的原话</span>
+      7月24晚上21点出发，凌晨1点40几到西安。2点半入住了转机酒店，3点全部人睡下。
+    </blockquote>
+  </div>
+
+  <div class="day">
+    <div class="day-head">
+      <span class="day-date">7/25 周六</span>
+      <span class="day-place">西安 → 杭州</span>
+      <span class="day-transport">✈ 到家</span>
+    </div>
+    <blockquote>
+      <span class="who">你的原话</span>
+      10点退房，搭免费的酒店大巴回到机场，寄存了箱子，然后打车去西安陕博。25号夜里23点的飞机（最后有延误，大概凌晨0点10几登机），到杭州是将近两点，打车180到华光路，3点多睡下。
+    </blockquote>
+    <ul>
+      <li>21 小时的转机，被你拿来带孩子看了一趟陕西历史博物馆。</li>
+    </ul>
+  </div>
+
+  <h2 class="sec">记下来的账</h2>
+  <table>
+    <tr><th>项目</th><th style="text-align:right">金额</th></tr>
+    <tr><td>杭州东 → 西安北 · G1882 二等 · 三人</td><td class="num">¥1,555.5</td></tr>
+    <tr><td>西安北 → 兰州西 · D2635</td><td class="num">¥427</td></tr>
+    <tr><td>兰州西 → 乌市 · D575</td><td class="num">¥1,103</td></tr>
+    <tr><td>乌市 → 库尔勒 · C802</td><td class="num">¥216</td></tr>
+    <tr><td>库尔勒 → 库车 · T9521</td><td class="num muted">未记录</td></tr>
+    <tr><td>库车 → 喀什 · T9527 软卧</td><td class="num">¥659</td></tr>
+    <tr><td>喀什 → 西安 → 杭州 · 机票两段 · 三人</td><td class="num">¥4,100</td></tr>
+    <tr><td>西安 百奥国际酒店 · 两晚</td><td class="num">¥431</td></tr>
+    <tr><td>兰州 拾光民宿 · 一晚</td><td class="num">¥244</td></tr>
+    <tr><td>西安机场 ↔ 陕博 · 打车</td><td class="num">¥340</td></tr>
+    <tr><td>陕西历史博物馆 · 预约</td><td class="num">¥170</td></tr>
+    <tr><td>杭州机场 → 华光路 · 打车</td><td class="num">¥180</td></tr>
+    <tr class="total"><td>有记录的合计</td><td class="num">≈ ¥9,425.5</td></tr>
+  </table>
+  <p class="muted" style="margin-top:10px">没记的：乌市三晚、库车与喀什住宿、门票、吃饭、包车。你哪天翻到账再补。</p>
+
+  <h2 class="sec">路上丢的、路上记下的</h2>
+  <div class="keeps">
+    <ul>
+      <li>冬辰的眼镜，丢在喀什第二天的白沙山白沙湖。</li>
+      <li>一双走一步「叽」一声的鞋，在 7 月 17 日那节静音车厢里来回走了一整趟。</li>
+    </ul>
+  </div>
+
+  <div class="todo">
+    <h3>还没回忆到的日子</h3>
+    <p class="days">7/19 天池 · 7/20 博斯腾湖 · 7/21 千佛洞与大峡谷 · 7/22 喀什老城 · 7/23 白沙湖</p>
+    <p>一句两句都行，不用写成文章。扔给我，我加进去，原话不动。</p>
+    <p>照片还没进来——E 盘现在没挂上。挂上以后我从 7/14–7/25 那几天里挑，挑完给你过目。</p>
+  </div>
+
+  <footer>
+    Cola 整理 · 2026.09.25<br>
+    你的原话一句没改，只在外面加了骨架<br>
+    <a href="./index.html" style="color:#8b4513;text-decoration:none">← 出发前那版行程页</a>
+  </footer>
+
+</div>
+</body>
+</html>
